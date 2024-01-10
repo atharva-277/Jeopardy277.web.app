@@ -1,0 +1,54 @@
+* {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9e3cb;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+th, td, caption{
+    text-align: center;
+    border: 1px solid #333;
+    border-collapse: separate;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background-color: #da8737;
+}
+
+th, td {
+    width: 500px;
+    height: 60px;
+}
+
+b {
+    background-color: #da8737;
+}
+
+.boardPicker {
+    background-color: #5a1b00;
+    color: #68a1a4;
+    font-family: 'Hammersmith One', sans-serif;
+    border-radius: 5px;
+}
+
+.container2 {
+    display: none;
+}
+
+#answerBox {
+    display: none;
+    font-size: 35px;
+}
+
+h1 {
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+}
+
+#questionBox {
+    font-size: 50px;
+}
