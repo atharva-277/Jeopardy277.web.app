@@ -515,6 +515,7 @@ food500.addEventListener("click", function(e) {
     container1.style.display = "none";
     container2.style.display = "block";
     question.innerText = "In what country was paneer tikka masala invented?";
+    question.innerText = "In what country was tikka masala invented?";
     answer.innerText = "United Kingdom";
     e.target.remove();
 
