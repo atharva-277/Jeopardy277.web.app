@@ -514,7 +514,7 @@ food500.addEventListener("click", function(e) {
     moneyType.innerText = "FOOD $500"
     container1.style.display = "none";
     container2.style.display = "block";
-    question.innerText = "In what country was chicken tikka masala invented?";
+    question.innerText = "In what country was paneer tikka masala invented?";
     answer.innerText = "United Kingdom";
     e.target.remove();
 
