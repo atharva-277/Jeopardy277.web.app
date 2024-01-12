@@ -515,7 +515,7 @@ food500.addEventListener("click", function(e) {
     container1.style.display = "none";
     container2.style.display = "block";
     question.innerText = "In what country was chicken tikka masala invented?";
-    answer.innerText = "United Kingdom, specifically, Glasgow, Scotland";
+    answer.innerText = "United Kingdom";
     e.target.remove();
 
     let reveal = document.createElement('a');
