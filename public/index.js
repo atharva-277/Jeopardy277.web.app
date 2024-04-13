@@ -530,7 +530,7 @@ food500.addEventListener("click", function(e) {
     })
 })
 
-superQuestion.addEventListener("click", function(e) {
+superQuestion.addEventListener("click", function() {
     moneyType.innerText = "SUPER QUESTION"
     container1.style.display = "none";
     container2.style.display = "block";
