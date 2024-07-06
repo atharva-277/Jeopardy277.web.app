@@ -1,14 +1,14 @@
-//question/money amount variables
+// question and money amount variables
 let movies100 = document.querySelector("#m100");
 let movies200 = document.querySelector("#m200");
 let movies300 = document.querySelector("#m300");
 let movies400 = document.querySelector("#m400");
 let movies500 = document.querySelector("#m500");
-let gk100 = document.querySelector("#gk100");
-let gk200 = document.querySelector("#gk200");
-let gk300 = document.querySelector("#gk300");
-let gk400 = document.querySelector("#gk400");
-let gk500 = document.querySelector("#gk500");
+let knowledge100 = document.querySelector("#k100");
+let knowledge200 = document.querySelector("#k200");
+let knowledge300 = document.querySelector("#k300");
+let knowledge400 = document.querySelector("#k400");
+let knowledge500 = document.querySelector("#k500");
 let geography100 = document.querySelector("#g100");
 let geography200 = document.querySelector("#g200");
 let geography300 = document.querySelector("#g300");
@@ -25,8 +25,7 @@ let food300 = document.querySelector("#f300");
 let food400 = document.querySelector("#f400");
 let food500 = document.querySelector("#f500");
 
-
-//other variable nessacary for functionality
+// other variables nessacary for functionality
 let container1 = document.querySelector(".container");
 let container2 = document.querySelector(".container2");
 let question = document.querySelector("#questionBox");
@@ -34,561 +33,180 @@ let answer = document.querySelector("#answerBox");
 let moneyType = document.querySelector("#moneyType");
 let superQuestion = document.querySelector("#superQuestion");
 
+// function for all questions
+function jeopardy (title, questions, answers, selector) {
+    moneyType.textContent = title;
+    container1.style.display = "none";
+    container2.style.display = "block";
+    question.innerText = questions;
+    answer.innerText = answers;
+    selector.target.remove();
 
-//all event listeneres for user interactivity
-answer.addEventListener("click", function() {
+    const reveal = document.createElement('button');
+    reveal.innerHTML = `Reveal Answer`;
+    reveal.classList.add("answer");
+    container2.appendChild(reveal);
+
+    reveal.addEventListener("click", function(e) {
+        answer.style.display = "block";
+        e.target.remove();
+    })
+}
+
+// all event listeneres for user interactivity
+answer.addEventListener("click", () => {
     container2.style.display = "none";
     container1.style.display = "flex";
     answer.style.display = "none";
 })
 
-movies100.addEventListener("click", function(e) {
-    moneyType.innerText = "BOLLYWOOD $100"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is the American counterpart to Bollywood?";
-    answer.innerText = "Hollywood";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+movies100.addEventListener("click", (e) => {
+    jeopardy('MOVIES $100', 'What is the Telegu counterpart to Bollywood?', 'Tollywood', e);
 })
 
-movies200.addEventListener("click", function(e) {
-    moneyType.innerText = "BOLLYWOOD $200"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What year does the Railway Men TV show take place in?";
-    answer.innerText = 1984;
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+movies200.addEventListener("click", (e) => {
+    jeopardy('MOVIES $200', "Who is Abishek Bachchan's father?", 'Amitabh Bachchan', e);
 })
 
-movies300.addEventListener("click", function(e) {
-    moneyType.innerText = "BOLLYWOOD $300"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "Which actor plays Khalid in the movie War?";
-    answer.innerText = "Tiger Shroff";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+movies300.addEventListener("click", (e) => {
+    jeopardy('MOVIES $300', "What was the first feature-length animated movie ever released?", 'Snow White and the Seven Dwarfs', e);
 })
 
-movies400.addEventListener("click", function(e) {
-    moneyType.innerText = "BOLLYWOOD $400"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What was the highest grossing Bollywood film of 2023?";
-    answer.innerText = "Jawan";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+movies400.addEventListener("click", (e) => {
+    jeopardy('MOVIES $400', "What was the highest grossing Hollywood film of 2023?", 'Barbie', e);
 })
 
-movies500.addEventListener("click", function(e) {
-    moneyType.innerText = "BOLLYWOOD $500"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "In what year was Bollywood created?";
-    answer.innerText = 1932;
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+movies500.addEventListener("click", (e) => {
+    jeopardy('MOVIES $500', "Which Bollywood actor has won the most number of Filmfare Awards for Best Actor?", 'Shah Rukh Khan', e);
 })
 
-gk100.addEventListener("click", function(e) {
-    moneyType.innerText = "GENERAL KNOWLEDGE $100"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "In what year did the Partition of India occur?";
-    answer.innerText = "1947";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+knowledge100.addEventListener("click", (e) => {
+    jeopardy('General Knowledge $100', "What is the fastest land animal?", 'Cheetah', e);
 })
 
-gk200.addEventListener("click", function(e) {
-    moneyType.innerText = "GENERAL KNOWLEDGE $200"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is it called when you knock down all 10 pins in bowling within 2 bowls?";
-    answer.innerText = "Spare";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+knowledge200.addEventListener("click", (e) => {
+    jeopardy('General Knowledge $200', "What is the largest planet in the Solar System?", 'Jupiter', e);
 })
 
-gk300.addEventListener("click", function(e) {
-    moneyType.innerText = "GENERAL KNOWLEDGE $300"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = `How many ghosts chase Pac-Man when starting the game? 
+knowledge300.addEventListener("click", (e) => {
+    jeopardy('General Knowledge $300', "In what year was the first Iphone released?", 2007, e);
+})
+
+knowledge400.addEventListener("click", (e) => {
+    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max", 'Deep Purple', e);
+})
+
+knowledge500.addEventListener("click", (e) => {
+    jeopardy('General Knowledge $500', "What does NASA stand for?", 'National Aeronautics and Space Administration', e);
+})
+
+geography100.addEventListener("click", (e) => {
+    jeopardy('Geography $100', `What is the capital of Italy?
     
-    Bonus: $100 for each ghost color named.`
-    answer.innerText = `4 
+    Bonus: $100 for the country situated within this capital`, `Rome
     
-    Red, Cyan, Pink, Yellow`;
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+    Vatican City`, e);
 })
 
-gk400.addEventListener("click", function(e) {
-    moneyType.innerText = "GENERAL KNOWLEDGE $400"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "Who was the 23rd president of the United States?";
-    answer.innerText = "Benjamin Harrsion";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+geography200.addEventListener("click", (e) => {
+    jeopardy('Geography $200', "What is the second largest country by land area?", 'Canada', e);
 })
 
-gk500.addEventListener("click", function(e) {
-    moneyType.innerText = "GENERAL KNOWLEDGE $500"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "How many letters are there in the Greek alphabet?";
-    answer.innerText = 24;
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+geography300.addEventListener("click", (e) => {
+    jeopardy('Geography $300', "What is the capital of the US state Alabama?", 'Montgomery', e);
 })
 
-geography100.addEventListener("click", function(e) {
-    moneyType.innerText = "GEOGRAPHY $100"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is the most populated nation on Earth?";
-    answer.innerText = "India";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+geography400.addEventListener("click", (e) => {
+    jeopardy('Geography $400', "What is the Southernmost country in the world?", 'Chile', e);
 })
 
-geography200.addEventListener("click", function(e) {
-    moneyType.innerText = "GEOGRAPHY $200"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is the capital of Germany?";
-    answer.innerText = "Berlin";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-geography300.addEventListener("click", function(e) {
-    moneyType.innerText = "GEOGRAPHY $300"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "Which US state is known as the land of 10 thousand lakes?";
-    answer.innerText = "Minnesota";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-geography400.addEventListener("click", function(e) {
-    moneyType.innerText = "GEOGRAPHY $400"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = `Name all the Great Lakes
-
-    All or Nothing`;
-    answer.innerText = "Superior, Huron, Michigan, Erie, Ontario";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-geography500.addEventListener("click", function(e) {
-    moneyType.innerText = "GEOGRAPHY $500"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is the Northernmost country in the world?";
-    answer.innerText = "Denmark because it owns Greenland :)";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-riddles100.addEventListener("click", function(e) {
-    moneyType.innerText = "RIDDLES $100"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What starts with a t, ends with a t, and has t in it.";
-    answer.innerText = "Teapot";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-riddles200.addEventListener("click", function(e) {
-    moneyType.innerText = "RIDDLES $200"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What is it that after you take the whole, some still remains?";
-    answer.innerText = "Wholesome";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-riddles300.addEventListener("click", function(e) {
-    moneyType.innerText = "RIDDLES $300"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What has a heart but no other organs?";
-    answer.innerText = "A deck of cards";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-riddles400.addEventListener("click", function(e) {
-    moneyType.innerText = "RIDDLES $400"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "An English word has 6 letters. When you take one away, 12 remain. What is the word?";
-    answer.innerText = "Dozens";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-riddles500.addEventListener("click", function(e) {
-    moneyType.innerText = "RIDDLES $500"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "A group of 10 people are walking to a shop. Even though only 2 have umbrellas, all of them manage to get to the shop without getting wet. How?";
-    answer.innerText = "It isn't raining outside.";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-food100.addEventListener("click", function(e) {
-    moneyType.innerText = "FOOD $100"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = `Which country was pizza made in?
+geography500.addEventListener("click", (e) => {
+    jeopardy('Geography $500', `Name all the -stan countries
     
-    Bonus: Name the city it was made in for an extra $100.`;
-    answer.innerText = `Italy
+    All or Nothing`, "Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Afghanistan, Pakistan", e);
+})
+
+riddles100.addEventListener("click", (e) => {
+    jeopardy('Riddles $100', "What starts with a P, ends with an E, and has thousands of letters?", 'Post Office', e);
+})
+
+riddles200.addEventListener("click", (e) => {
+    jeopardy('Riddles $200', "2 people were playing chess but they both win. How?", 'They were playing seperate games against different opponents.', e);
+})
+
+riddles300.addEventListener("click", (e) => {
+    jeopardy('Riddles $300', "Name three consecutive days without naming any of the seven days of the week.", 'Yesterday, today and tomorrow.', e);
+})
+
+riddles400.addEventListener("click", (e) => {
+    jeopardy('Riddles $400', "Wednesday, Bill and Jim went to a restaurant. They ordered and ate their food. Then they paid the bill, but neither Bill nor Jim paid. Who did?", 'Wednesday did', e);
+})
+
+riddles500.addEventListener("click", (e) => {
+    jeopardy('Riddles $500', "One breaks but never falls. And the other falls but never breaks. What are they?", 'Day and Night', e);
+})
+
+food100.addEventListener("click", (e) => {
+    jeopardy('Food $100', "What fast-food company's logo consists of 2 golden arcs?", 'McDonalds', e);
+})
+
+food200.addEventListener("click", (e) => {
+    jeopardy('Food $100', "Which American city is most famous for their deep-dish pizza?", 'Chicago', e);
+})
+
+food300.addEventListener("click", (e) => {
+    jeopardy('Food $300', "What scale is used to measure spiciness of peppers?", 'The Scoville Heat Scale', e);
+})
+
+food400.addEventListener("click", (e) => {
+    jeopardy('Food $400', `Which 2 countries are the biggest exporters of coffee beans worldwide?
     
-    Naples`;
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+    All or Nothing`, 'Brazil and Vietnam', e);
 })
 
-food200.addEventListener("click", function(e) {
-    moneyType.innerText = "FOOD $200"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "What food never spoils?";
-    answer.innerText = "Honey";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
+food500.addEventListener("click", (e) => {
+    jeopardy('Food $500', "Which chocolate bar is the most popular globally?", "Snickers' Bar", e);
 })
 
-food300.addEventListener("click", function(e) {
-    moneyType.innerText = "FOOD $300"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "Which type of pasta is made from potatoes?";
-    answer.innerText = "Gnocchi";
-    e.target.remove();
+// Function to create Super Questions links
+function supQuestion (topic, emoji) {
+    topic.innerHTML = emoji;
+    topic.classList.add('options');
+    container2.appendChild(topic);
+}
 
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-food400.addEventListener("click", function(e) {
-    moneyType.innerText = "FOOD $400"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = `Which 2 spices are the most popular in the world
-    
-    All or Nothing`;
-    answer.innerText = "Pepper and Mustard";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-food500.addEventListener("click", function(e) {
-    moneyType.innerText = "FOOD $500"
-    container1.style.display = "none";
-    container2.style.display = "block";
-    question.innerText = "In what country was paneer tikka masala invented?";
-    question.innerText = "In what country was tikka masala invented?";
-    answer.innerText = "United Kingdom";
-    e.target.remove();
-
-    let reveal = document.createElement('a');
-    reveal.innerHTML = `<button>Reveal Answer</button>`
-    reveal.classList.add("answer");
-    container2.appendChild(reveal);
-
-    reveal.addEventListener("click", function(e) {
-        answer.style.display = "block"
-        e.target.remove();
-    })
-})
-
-superQuestion.addEventListener("click", function() {
-    moneyType.innerText = "SUPER QUESTION"
+superQuestion.addEventListener("click", () => {
+    moneyType.textContent = "SUPER QUESTION";
     container1.style.display = "none";
     container2.style.display = "block";
     question.style.display = "none";
 
-    let geography = document.createElement('a');
-    geography.innerHTML = `<button>Geography</button>`
-    geography.style.marginLeft = "500px"
-    container2.appendChild(geography);
+    let knowledge = document.createElement('button');
+    let movies = document.createElement('button');
+    supQuestion(knowledge, `🧠`);
+    supQuestion(movies, `🎞️`);
 
-    let food = document.createElement('a');
-    food.innerHTML = `<button>Food</button>`
-    food.style.marginLeft = "100px"
-    container2.appendChild(food);
-
-    
-    geography.addEventListener("click", function(e) {
-        geography.style.margin = "auto";
+    knowledge.addEventListener("click", (e) => {
+        knowledge.style.margin = "auto";
         question.style.display = "block";
-        question.innerText = `Question 1: The world capital cities of Vienna, Bratislava, and Budapest all lie along what river in Europe?
-
-        Question 2: A lion holding a sword appears on the logo of Ceylon Tea as well as the flag of what country in the Indian Ocean?`;
-        answer.innerText = `Question 1: Danube
-        Question 2: Sri Lanka`;
-        e.target.remove();
-        food.remove();
-
-        let reveal = document.createElement('a');
-        reveal.innerHTML = `<button>Reveal Answer</button>`
-        reveal.classList.add("answer");
-        container2.appendChild(reveal);
-
-        reveal.addEventListener("click", function(e) {
-            answer.style.display = "block"
-            e.target.remove();
-        })
+        jeopardy('Super Question', `Question 1: Which president is featured on the $2 bill?
+        
+        Question 2: Which planet in our solar system has the most moons?`, 
+        `Question 1: Thomas Jefferson
+        
+        Question 2: Saturn`, e);
+        movies.remove();
     })
 
-    food.addEventListener("click", function(e) {
-        food.style.margin = "auto";
+    movies.addEventListener("click", (e) => {
+        movies.style.margin = "auto";
         question.style.display = "block";
-        question.innerText = `Question 1: What brand of chips has inspired an internet community to search for an individual chip that looks most like the Pope's hat?
-
-        Question 2: What candy, which is produced in Austria and Connecticut, has a name that is an abbreviation for the German word for peppermint?`;
-        answer.innerText = `Question 1: Doritos
-        Question 2: PEZ`;
-        e.target.remove();
-        geography.remove();
-
-        let reveal = document.createElement('a');
-        reveal.innerHTML = `<button>Reveal Answer</button>`
-        reveal.classList.add("answer");
-        container2.appendChild(reveal);
-
-        reveal.addEventListener("click", function(e) {
-            answer.style.display = "block"
-            e.target.remove();
-        })
+        jeopardy('Super Question', `Question 1: Which Pixar movie is the highest lifetime grossing film as of 2024?
+        
+        Question 2: In which year did Amitabh Bachchan start his acting career in Hindi cinema?`, 
+        `Question 1: Incredibles 2(maybe Inside Out 2)
+        
+        Question 2: 1972`, e);
+        knowledge.remove();
     })
-    
 })
