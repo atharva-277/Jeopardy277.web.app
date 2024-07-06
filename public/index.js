@@ -93,7 +93,7 @@ knowledge300.addEventListener("click", (e) => {
 })
 
 knowledge400.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max", 'Deep Purple', e);
+    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max.", 'Deep Purple', e);
 })
 
 knowledge500.addEventListener("click", (e) => {
