@@ -31,10 +31,10 @@
   <body>
     <div class="container">
       <table>
-          <caption id="superQuestion"><b>THE BOARD</b></caption>
+          <caption id="superQuestion"><b class="board">THE BOARD</b></caption>
           <thead>
               <tr>
-                  <th scope="col" class="topics">Bollywood</th>
+                  <th scope="col" class="topics">Movies</th>
                   <th scope="col" class="topics">General Knowledge</th>
                   <th scope="col" class="topics">Geography</th>
                   <th scope="col" class="topics">Riddles</th>
@@ -44,7 +44,7 @@
           <tbody>
               <tr>
                   <td ><button id="m100" class="boardPicker">$100</button></td>
-                  <td><button id="gk100"  class="boardPicker">$100</button></td>
+                  <td><button id="k100"  class="boardPicker">$100</button></td>
                   <td ><button id="g100" class="boardPicker">$100</button></td>
                   <td ><button id="r100" class="boardPicker">$100</button></td>
                   <td ><button id="f100" class="boardPicker">$100</button></td>
@@ -52,7 +52,7 @@
 
               <tr>
                   <td ><button id="m200" class="boardPicker">$200</button></td>
-                  <td><button id="gk200"  class="boardPicker">$200</button></td>
+                  <td><button id="k200"  class="boardPicker">$200</button></td>
                   <td ><button id="g200" class="boardPicker">$200</button></td>
                   <td ><button id="r200" class="boardPicker">$200</button></td>
                   <td ><button id="f200" class="boardPicker">$200</button></td>
@@ -60,7 +60,7 @@
 
               <tr>
                   <td ><button id="m300" class="boardPicker">$300</button></td>
-                  <td><button id="gk300"  class="boardPicker">$300</button></td>
+                  <td><button id="k300"  class="boardPicker">$300</button></td>
                   <td ><button id="g300" class="boardPicker">$300</button></td>
                   <td ><button id="r300" class="boardPicker">$300</button></td>
                   <td ><button id="f300" class="boardPicker">$300</button></td>
@@ -68,7 +68,7 @@
 
               <tr>
                   <td ><button id="m400" class="boardPicker">$400</button></td>
-                  <td><button id="gk400"  class="boardPicker">$400</button></td>
+                  <td><button id="k400"  class="boardPicker">$400</button></td>
                   <td ><button id="g400" class="boardPicker">$400</button></td>
                   <td ><button id="r400" class="boardPicker">$400</button></td>
                   <td ><button id="f400" class="boardPicker">$400</button></td>
@@ -76,7 +76,7 @@
 
               <tr>
                   <td ><button id="m500" class="boardPicker">$500</button></td>
-                  <td><button id="gk500"  class="boardPicker">$500</button></td>
+                  <td><button id="k500"  class="boardPicker">$500</button></td>
                   <td ><button id="g500" class="boardPicker">$500</button></td>
                   <td ><button id="r500" class="boardPicker">$500</button></td>
                   <td ><button id="f500" class="boardPicker">$500</button></td>
@@ -86,11 +86,10 @@
   </div>
 
   <div class="container2">
-      <h1 id="moneyType">TYPE MONEY AMOUNT</h1>
-      <p id="questionBox">Question will appear here</p>
-      <p id="answerBox"><button>Answer will appear here</button></p>
+      <h1 id="moneyType"></h1>
+      <p id="questionBox"></p>
+      <p id="answerBox"></p>
   </div>
-
 
   <script src="index.js"></script>
 
@@ -131,10 +130,6 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
       });
-    </script>
-    <a href="https://www.death-clock.org" class="death">
-      <img src="https://www.death-clock.org/death-clock-badge1.php?dod=Saturday, 18th September&yod=2106&aod=Age 96" alt="I Got My Death Prediction at The Death Clock" width="220" height="180"/>
-    </a>
-                  
+    </script>              
   </body>
 </html>
