@@ -9,6 +9,14 @@
     justify-content: center;
 }
 
+.topics {
+    font-size: 1.5rem;
+}
+
+.board {
+    font-size: 2rem;
+}
+
 th, td, caption{
     text-align: center;
     border: 1px solid #333;
@@ -32,6 +40,10 @@ b {
     color: #68a1a4;
     font-family: 'Hammersmith One', sans-serif;
     border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #ffd171;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .container2 {
@@ -41,6 +53,7 @@ b {
 #answerBox {
     display: none;
     font-size: 35px;
+    cursor: pointer;
 }
 
 h1 {
@@ -60,6 +73,29 @@ button {
     border-color: black;
 }
 
-.death {
-    display: none;
+.answer {
+    font-family: inherit;
+    border: 2px solid black;
+    box-shadow: 5px 5px gray;
+    cursor: pointer;
+}
+
+#superQuestion {
+    cursor: pointer;
+}
+
+.options {
+    margin-left: 375px;
+    margin-right: -250px;
+    border: 3px solid black;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    font-size: 144px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.answer:hover, .boardPicker:hover, .options:hover{
+    opacity: 80%;
 }
