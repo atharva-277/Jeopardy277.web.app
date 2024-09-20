@@ -54,6 +54,7 @@ b {
     display: none;
     font-size: 35px;
     cursor: pointer;
+    text-shadow: 2px 2px rgb(192, 191, 191);
 }
 
 h1 {
