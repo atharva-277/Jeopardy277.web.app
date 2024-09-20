@@ -204,7 +204,7 @@ superQuestion.addEventListener("click", () => {
         jeopardy('Super Question', `Question 1: Which Pixar movie is the highest lifetime grossing film as of 2024?
         
         Question 2: In which year did Amitabh Bachchan start his acting career in Hindi cinema?`, 
-        `Question 1: Incredibles 2(maybe Inside Out 2)
+        `Question 1: Inside Out 2
         
         Question 2: 1972`, e);
         knowledge.remove();
