@@ -1,29 +1,7 @@
 // question and money amount variables
-let movies100 = document.querySelector("#m100");
-let movies200 = document.querySelector("#m200");
-let movies300 = document.querySelector("#m300");
-let movies400 = document.querySelector("#m400");
-let movies500 = document.querySelector("#m500");
-let knowledge100 = document.querySelector("#k100");
-let knowledge200 = document.querySelector("#k200");
-let knowledge300 = document.querySelector("#k300");
-let knowledge400 = document.querySelector("#k400");
-let knowledge500 = document.querySelector("#k500");
-let geography100 = document.querySelector("#g100");
-let geography200 = document.querySelector("#g200");
-let geography300 = document.querySelector("#g300");
-let geography400 = document.querySelector("#g400");
-let geography500 = document.querySelector("#g500");
-let riddles100 = document.querySelector("#r100");
-let riddles200 = document.querySelector("#r200");
-let riddles300 = document.querySelector("#r300");
-let riddles400 = document.querySelector("#r400");
-let riddles500 = document.querySelector("#r500");
-let food100 = document.querySelector("#f100");
-let food200 = document.querySelector("#f200");
-let food300 = document.querySelector("#f300");
-let food400 = document.querySelector("#f400");
-let food500 = document.querySelector("#f500");
+let allQuestions = [
+    'm100', 'm200', 'm300', 'm400', 'm500', 'k100', 'k200', 'k300', 'k400', 'k500', 'g100', 'g200', 'g300', 'g400', 'g500', 'r100', 'r200', 'r300', 'r400', 'r500', 'f100', 'f200', 'f300', 'f400', 'f500'
+]
 
 // other variables nessacary for functionality
 let container1 = document.querySelector(".container");
@@ -40,7 +18,7 @@ function jeopardy (title, questions, answers, selector) {
     container2.style.display = "block";
     question.innerText = questions;
     answer.innerText = answers;
-    selector.target.remove();
+    selector.remove();
 
     const reveal = document.createElement('button');
     reveal.innerHTML = `Reveal Answer`;
@@ -60,113 +38,113 @@ answer.addEventListener("click", () => {
     answer.style.display = "none";
 })
 
-movies100.addEventListener("click", (e) => {
-    jeopardy('MOVIES $100', 'What is the Telegu counterpart to Bollywood?', 'Tollywood', e);
-})
+function m100() {
+    jeopardy('MOVIES $100', 'What is the Telegu counterpart to Bollywood?', 'Tollywood', document.getElementById(allQuestions[0]));
+}
 
-movies200.addEventListener("click", (e) => {
-    jeopardy('MOVIES $200', "Who is Abishek Bachchan's father?", 'Amitabh Bachchan', e);
-})
+function m200() {
+    jeopardy('MOVIES $200', "Who is Abishek Bachchan's father?", 'Amitabh Bachchan', document.getElementById(allQuestions[1]));
+}
 
-movies300.addEventListener("click", (e) => {
-    jeopardy('MOVIES $300', "What was the first feature-length animated movie ever released?", 'Snow White and the Seven Dwarfs', e);
-})
+function m300() {
+    jeopardy('MOVIES $300', "What was the first feature-length animated movie ever released?", 'Snow White and the Seven Dwarfs', document.getElementById(allQuestions[2]));
+}
 
-movies400.addEventListener("click", (e) => {
-    jeopardy('MOVIES $400', "What was the highest grossing Hollywood film of 2023?", 'Barbie', e);
-})
+function m400() {
+    jeopardy('MOVIES $400', "What was the highest grossing Hollywood film of 2023?", 'Barbie', document.getElementById(allQuestions[3]));
+}
 
-movies500.addEventListener("click", (e) => {
-    jeopardy('MOVIES $500', "Which Bollywood actor has won the most number of Filmfare Awards for Best Actor?", 'Shah Rukh Khan', e);
-})
+function m500() {
+    jeopardy('MOVIES $500', "Which Bollywood actor has won the most number of Filmfare Awards for Best Actor?", 'Shah Rukh Khan', document.getElementById(allQuestions[4]));
+}
 
-knowledge100.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $100', "What is the fastest land animal?", 'Cheetah', e);
-})
+function k100() {
+    jeopardy('General Knowledge $100', "What is the fastest land animal?", 'Cheetah', document.getElementById(allQuestions[5]));
+}
 
-knowledge200.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $200', "What is the largest planet in the Solar System?", 'Jupiter', e);
-})
+function k200() {
+    jeopardy('General Knowledge $200', "What is the largest planet in the Solar System?", 'Jupiter', document.getElementById(allQuestions[6]));
+}
 
-knowledge300.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $300', "In what year was the first Iphone released?", 2007, e);
-})
+function k300() {
+    jeopardy('General Knowledge $300', "In what year was the first Iphone released?", 2007, document.getElementById(allQuestions[7]));
+}
 
-knowledge400.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max.", 'Deep Purple', e);
-})
+function k400() {
+    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max?", 'Deep Purple', document.getElementById(allQuestions[8]));
+}
 
-knowledge500.addEventListener("click", (e) => {
-    jeopardy('General Knowledge $500', "What does NASA stand for?", 'National Aeronautics and Space Administration', e);
-})
+function k500() {
+    jeopardy('General Knowledge $500', "What does NASA stand for?", 'National Aeronautics and Space Administration', document.getElementById(allQuestions[9]));
+}
 
-geography100.addEventListener("click", (e) => {
+function g100() {
     jeopardy('Geography $100', `What is the capital of Italy?
-    
+
     Bonus: $100 for the country situated within this capital`, `Rome
-    
-    Vatican City`, e);
-})
 
-geography200.addEventListener("click", (e) => {
-    jeopardy('Geography $200', "What is the second largest country by land area?", 'Canada', e);
-})
+    Vatican City`, document.getElementById(allQuestions[10]));
+}
 
-geography300.addEventListener("click", (e) => {
-    jeopardy('Geography $300', "What is the capital of the US state Alabama?", 'Montgomery', e);
-})
+function g200() {
+    jeopardy('Geography $200', "What is the second largest country by land area?", 'Canada', document.getElementById(allQuestions[11]));
+}
 
-geography400.addEventListener("click", (e) => {
-    jeopardy('Geography $400', "What is the Southernmost country in the world?", 'Chile', e);
-})
+function g300() {
+    jeopardy('Geography $300', "What is the capital of the US state Alabama?", 'Montgomery', document.getElementById(allQuestions[12]));
+}
 
-geography500.addEventListener("click", (e) => {
+function g400() {
+    jeopardy('Geography $400', "What is the Southernmost country in the world?", 'Chile', document.getElementById(allQuestions[13]));
+}
+
+function g500() {
     jeopardy('Geography $500', `Name all the -stan countries
     
-    All or Nothing`, "Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Afghanistan, Pakistan", e);
-})
+    All or Nothing`, "Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Afghanistan, Pakistan", document.getElementById(allQuestions[14]));
+}
 
-riddles100.addEventListener("click", (e) => {
-    jeopardy('Riddles $100', "What starts with a P, ends with an E, and has thousands of letters?", 'Post Office', e);
-})
+function r100() {
+    jeopardy('Riddles $100', "What starts with a P, ends with an E, and has thousands of letters?", 'Post Office', document.getElementById(allQuestions[15]));
+}
 
-riddles200.addEventListener("click", (e) => {
-    jeopardy('Riddles $200', "2 people were playing chess but they both win. How?", 'They were playing seperate games against different opponents.', e);
-})
+function r200() {
+    jeopardy('Riddles $200', "2 people were playing chess but they both win. How?", 'They were playing seperate games against different opponents.', document.getElementById(allQuestions[16]));
+}
 
-riddles300.addEventListener("click", (e) => {
-    jeopardy('Riddles $300', "Name three consecutive days without naming any of the seven days of the week.", 'Yesterday, today and tomorrow.', e);
-})
+function r300() {
+    jeopardy('Riddles $300', "Name three consecutive days without naming any of the seven days of the week.", 'Yesterday, today and tomorrow.', document.getElementById(allQuestions[17]));
+}
 
-riddles400.addEventListener("click", (e) => {
-    jeopardy('Riddles $400', "Wednesday, Bill and Jim went to a restaurant. They ordered and ate their food. Then they paid the bill, but neither Bill nor Jim paid. Who did?", 'Wednesday did', e);
-})
+function r400() {
+    jeopardy('Riddles $400', "Wednesday, Bill and Jim went to a restaurant. They ordered and ate their food. Then they paid the bill, but neither Bill nor Jim paid. Who did?", 'Wednesday did', document.getElementById(allQuestions[18]));
+}
 
-riddles500.addEventListener("click", (e) => {
-    jeopardy('Riddles $500', "One breaks but never falls. And the other falls but never breaks. What are they?", 'Day and Night', e);
-})
+function r500() {
+    jeopardy('Riddles $500', "One breaks but never falls. And the other falls but never breaks. What are they?", 'Day and Night', document.getElementById(allQuestions[19]));
+}
 
-food100.addEventListener("click", (e) => {
-    jeopardy('Food $100', "What fast-food company's logo consists of 2 golden arcs?", 'McDonalds', e);
-})
+function f100() {
+    jeopardy('Food $100', "What fast-food company's logo consists of 2 golden arcs?", 'McDonalds', document.getElementById(allQuestions[20]));
+}
 
-food200.addEventListener("click", (e) => {
-    jeopardy('Food $100', "Which American city is most famous for their deep-dish pizza?", 'Chicago', e);
-})
+function f200() {
+    jeopardy('Food $100', "Which American city is most famous for their deep-dish pizza?", 'Chicago', document.getElementById(allQuestions[21]));
+}
 
-food300.addEventListener("click", (e) => {
-    jeopardy('Food $300', "What scale is used to measure spiciness of peppers?", 'The Scoville Heat Scale', e);
-})
+function f300() {
+    jeopardy('Food $300', "What scale is used to measure spiciness of peppers?", 'The Scoville Heat Scale', document.getElementById(allQuestions[22]));
+}
 
-food400.addEventListener("click", (e) => {
+function f400() {
     jeopardy('Food $400', `Which 2 countries are the biggest exporters of coffee beans worldwide?
     
-    All or Nothing`, 'Brazil and Vietnam', e);
-})
+    All or Nothing`, 'Brazil and Vietnam', document.getElementById(allQuestions[23]));
+}
 
-food500.addEventListener("click", (e) => {
-    jeopardy('Food $500', "Which chocolate bar is the most popular globally?", "Snickers' Bar", e);
-})
+function f500() {
+    jeopardy('Food $500', "Which chocolate bar is the most popular globally?", "Snickers' Bar", document.getElementById(allQuestions[24]));
+}
 
 // Function to create Super Questions links
 function supQuestion (topic, emoji) {
@@ -194,7 +172,7 @@ superQuestion.addEventListener("click", () => {
         Question 2: Which planet in our solar system has the most moons?`, 
         `Question 1: Thomas Jefferson
         
-        Question 2: Saturn`, e);
+        Question 2: Saturn`, knowledge);
         movies.remove();
     })
 
@@ -206,7 +184,7 @@ superQuestion.addEventListener("click", () => {
         Question 2: In which year did Amitabh Bachchan start his acting career in Hindi cinema?`, 
         `Question 1: Inside Out 2
         
-        Question 2: 1972`, e);
+        Question 2: 1972`, movies);
         knowledge.remove();
     })
 })
