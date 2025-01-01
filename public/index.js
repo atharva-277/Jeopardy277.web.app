@@ -44,111 +44,113 @@ answer.addEventListener("click", () => {
 })
 
 function m100() {
-    jeopardy('MOVIES $100', 'What is the Telegu counterpart to Bollywood?', 'Tollywood', 0);
+    jeopardy('MOVIES $100', 'Which company is known for Mickey Mouse?', 'Disney', 0);
 }
 
 function m200() {
-    jeopardy('MOVIES $200', "Who is Abishek Bachchan's father?", 'Amitabh Bachchan', 1);
+    jeopardy('MOVIES $200', "Who is Sanjay Dutt's father?", 'Sunil Dutt', 1);
 }
 
 function m300() {
-    jeopardy('MOVIES $300', "What was the first feature-length animated movie ever released?", 'Snow White and the Seven Dwarfs', 2);
+    jeopardy('MOVIES $300', "What was the first major movie to feature Carol of the Bells?", 'Home Alone', 2);
 }
 
 function m400() {
-    jeopardy('MOVIES $400', "What was the highest grossing Hollywood film of 2023?", 'Barbie', 3);
+    jeopardy('MOVIES $400', "What was the highest grossing Marvel film of 2024?", 'Deadpool and Wolverine', 3);
 }
 
 function m500() {
-    jeopardy('MOVIES $500', "Which Bollywood actor has won the most number of Filmfare Awards for Best Actor?", 'Shah Rukh Khan', 4);
+    jeopardy('MOVIES $500', "What initial career did Amitabh Bachchan take up in 1969?", 'Voice Acting/Narrating', 4);
 }
 
 function k100() {
-    jeopardy('General Knowledge $100', "What is the fastest land animal?", 'Cheetah', 5);
+    jeopardy('General Knowledge $100', "What is the largest animal?", 'Blue Whale', 5);
 }
 
 function k200() {
-    jeopardy('General Knowledge $200', "What is the largest planet in the Solar System?", 'Jupiter', 6);
+    jeopardy('General Knowledge $200', "What does 'www' stand for in a url?", 'World Wide Web', 6);
 }
 
 function k300() {
-    jeopardy('General Knowledge $300', "In what year was the first Iphone released?", 2007, 7);
+    jeopardy('General Knowledge $300', `What 2 planets in the solar system have abnormal rotations?
+        
+        All or Nothing`, 'Venus and Uranus', 7);
 }
 
 function k400() {
-    jeopardy('General Knowledge $400', "What was the most common color for an Iphone 14 Pro/Max?", 'Deep Purple', 8);
+    jeopardy('General Knowledge $400', `What year was the United Nations founded in?`, '1945', 8);
 }
 
 function k500() {
-    jeopardy('General Knowledge $500', "What does NASA stand for?", 'National Aeronautics and Space Administration', 9);
+    jeopardy('General Knowledge $500', "After Chicago, what is the most populous U.S. city in the Central Time Zone?", 'Houston', 9);
 }
 
 function g100() {
-    jeopardy('Geography $100', `What is the capital of Italy?
-
-    Bonus: $100 for the country situated within this capital`, `Rome
-
-    Vatican City`, 10);
+    jeopardy('Geography $100', `Which country is home to the Eiffel Tower?`, `France`, 10);
 }
 
 function g200() {
-    jeopardy('Geography $200', "What is the second largest country by land area?", 'Canada', 11);
+    jeopardy('Geography $200', "What is the biggest desert in the world?", 'Antarctica Desert', 11);
 }
 
 function g300() {
-    jeopardy('Geography $300', "What is the capital of the US state Alabama?", 'Montgomery', 12);
+    jeopardy('Geography $300', "What is the capital of the country Colombia?", 'Bogota', 12);
 }
 
 function g400() {
-    jeopardy('Geography $400', "What is the Southernmost country in the world?", 'Chile', 13);
+    jeopardy('Geography $400', `What are the 2 double-landlocked countries?
+        
+        All or Nothing`, 'Uzbekistan and Liechtenstein', 13);
 }
 
 function g500() {
-    jeopardy('Geography $500', `Name all the -stan countries
-    
-    All or Nothing`, "Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Afghanistan, Pakistan", 14);
+    jeopardy('Geography $500', `How many countries contain the word 'guinea' within their name?
+        
+        Bonus: $100 for each correct 'guinea' country named`, `4
+        
+        Papua New Guinea, Guinea, Guinea-Bissau, Equatorial Guinea`, 14);
 }
 
 function r100() {
-    jeopardy('Riddles $100', "What starts with a P, ends with an E, and has thousands of letters?", 'Post Office', 15);
+    jeopardy('Riddles $100', "How many letters are in the alphabet?", '11', 15);
 }
 
 function r200() {
-    jeopardy('Riddles $200', "2 people were playing chess but they both win. How?", 'They were playing seperate games against different opponents.', 16);
+    jeopardy('Riddles $200', "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?", 'Map', 16);
 }
 
 function r300() {
-    jeopardy('Riddles $300', "Name three consecutive days without naming any of the seven days of the week.", 'Yesterday, today and tomorrow.', 17);
+    jeopardy('Riddles $300', "A woman shoots her husband, then holds him underwater for five minutes. Next, she hangs him. Right after, they enjoy a lovely dinner. How?", 'She took a picture of him and developed it.', 17);
 }
 
 function r400() {
-    jeopardy('Riddles $400', "Wednesday, Bill and Jim went to a restaurant. They ordered and ate their food. Then they paid the bill, but neither Bill nor Jim paid. Who did?", 'Wednesday did', 18);
+    jeopardy('Riddles $400', "First you eat me, then you get eaten. What am I?", 'Fishook', 18);
 }
 
 function r500() {
-    jeopardy('Riddles $500', "One breaks but never falls. And the other falls but never breaks. What are they?", 'Day and Night', 19);
+    jeopardy('Riddles $500', "Every night I'm told what to do, and each morning I do what I'm told. But I still don't escape your scold. What am I?", 'Alarm Clock', 19);
 }
 
 function f100() {
-    jeopardy('Food $100', "What fast-food company's logo consists of 2 golden arcs?", 'McDonalds', 20);
+    jeopardy('Food $100', "What fast-food company's mascots are cows?", 'Chick-Fil-A', 20);
 }
 
 function f200() {
-    jeopardy('Food $100', "Which American city is most famous for their deep-dish pizza?", 'Chicago', 21);
+    jeopardy('Food $100', "What is the most popular pizza topping in the United States?", 'Pepperoni', 21);
 }
 
 function f300() {
-    jeopardy('Food $300', "What scale is used to measure spiciness of peppers?", 'The Scoville Heat Scale', 22);
+    jeopardy('Food $300', "What is the spiciest, natural pepper in the world?", 'Trinidad Morgua Scorpion Pepper', 22);
 }
 
 function f400() {
-    jeopardy('Food $400', `Which 2 countries are the biggest exporters of coffee beans worldwide?
-    
-    All or Nothing`, 'Brazil and Vietnam', 23);
+    jeopardy('Food $400', `Name the top 3 United States food consumption days.
+        
+        All or Nothing`, 'Christmas, Thanksgiving, Super Bowl Sunday', 23);
 }
 
 function f500() {
-    jeopardy('Food $500', "Which chocolate bar is the most popular globally?", "Snickers' Bar", 24);
+    jeopardy('Food $500', "Which country consumes the most turkey per person?", "Israel", 24);
 }
 
 // Function to create Super Questions links
@@ -156,8 +158,6 @@ function supQuestion (topic, emoji) {
     topic.innerHTML = emoji;
     topic.classList.add('options');
     container2.appendChild(topic);
-    let x = document.createElement('p')
-    x.id = 'y'
 }
 
 superQuestion.addEventListener("click", () => {
@@ -166,34 +166,34 @@ superQuestion.addEventListener("click", () => {
     container2.style.display = "block";
     question.style.display = "none";
 
-    let knowledge = document.createElement('button');
-    let movies = document.createElement('button');
-    supQuestion(knowledge, `🧠`);
-    supQuestion(movies, `🎞️`);
+    let geography = document.createElement('button');
+    let food = document.createElement('button');
+    supQuestion(geography, `🌏`);
+    supQuestion(food, `🍔`);
 
-    knowledge.addEventListener("click", () => {
-        knowledge.style.margin = "auto";
+    geography.addEventListener("click", () => {
+        geography.style.margin = "auto";
         question.style.display = "block";
-        jeopardy('Super Question', `Question 1: Which president is featured on the $2 bill?
+        jeopardy('Super Question', `Question 1: What is the world's deepest lake?
         
-        Question 2: Which planet in our solar system has the most moons?`, 
-        `Question 1: Thomas Jefferson
+        Question 2: What country has the most time zones?`, 
+        `Question 1: Lake Baikal
         
-        Question 2: Saturn`, 25);
-        knowledge.remove()
-        movies.remove();
+        Question 2: France`, 25);
+        geography.remove()
+        food.remove();
     })
 
-    movies.addEventListener("click", () => {
-        movies.style.margin = "auto";
+    food.addEventListener("click", () => {
+        food.style.margin = "auto";
         question.style.display = "block";
-        jeopardy('Super Question', `Question 1: Which Pixar movie is the highest lifetime grossing film as of 2024?
+        jeopardy('Super Question', `Question 1: Which state has pumpkin pie listed as its official state pie?
         
-        Question 2: In which year did Amitabh Bachchan start his acting career in Hindi cinema?`, 
-        `Question 1: Inside Out 2
+        Question 2: What fast-food chain first introduced the drive-thru window?`, 
+        `Question 1: Illinois
         
-        Question 2: 1972`, 25);
-        movies.remove()
-        knowledge.remove();
+        Question 2: Wendy's`, 25);
+        food.remove()
+        geography.remove();
     })
 })
