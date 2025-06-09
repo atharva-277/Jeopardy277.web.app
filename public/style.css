@@ -65,6 +65,7 @@ h1 {
 
 #questionBox {
     font-size: 50px;
+    white-space: pre-wrap;
 }
 
 button {
