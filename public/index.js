@@ -29,6 +29,8 @@ let jeopardyData = [
     {id: "superFood", title: "SUPER QUESTION", question:"Question 1: Which state has pumpkin pie listed as its official state pie?\n\nQuestion 2: What fast-food chain first introduced the drive-thru window?", answer:"Question 1: Illinois\n\nQuestion 2: Wendy's"}
 ]
 
+const buttonsInit = new Set()
+
 // other variables nessacary for functionality
 let container1 = document.querySelector(".container");
 let container2 = document.querySelector(".container2");
@@ -69,13 +71,19 @@ function setupJeopardyBoard(supQ, supQ2) {
     for (let i = 0; i < jeopardyData.length; i++) {
         let item = jeopardyData[i]
         let button = document.getElementById(item.id)
-        button.addEventListener("click", function() {
-            if (supQ && supQ2) {
-                supQ.remove()
-                supQ2.remove()
-            }
-            jeopardy(item)
-        })
+        if (!buttonsInit.has(item.id)) {
+            button.addEventListener("click", function() {
+                if (supQ && supQ2) {
+                    supQ.remove()
+                    supQ2.remove()
+                    buttonsInit.delete(supQ.id)
+                    buttonsInit.delete(supQ2.id)
+                }
+                jeopardy(item)
+            })
+
+            buttonsInit.add(item.id)
+        }
     }
 }
 
