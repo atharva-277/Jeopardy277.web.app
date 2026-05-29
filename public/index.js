@@ -15,8 +15,9 @@ let jeopardyData = [
   {
     id: "m300",
     title: "MOVIES $300",
-    question: "What was the first major movie to feature Carol of the Bells?",
-    answer: "Home Alone",
+    question:
+      "What awards are necessary to achieve 'EGOT status'?\n\nAll or Nothing",
+    answer: "Emmy, Grammy, Oscar, Tony",
   },
   {
     id: "m400",
