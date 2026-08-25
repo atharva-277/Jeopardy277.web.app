@@ -3,20 +3,20 @@ let jeopardyData = [
   {
     id: "m100",
     title: "MOVIES $100",
-    question: "Which company is known for Mickey Mouse?",
-    answer: "Disney",
+    question: "Who created Mickey Mouse?",
+    answer: "Walt Disney",
   },
   {
     id: "m200",
     title: "MOVIES $200",
     question: "What award is given for excellence in film?",
-    answer: "Oscar Award",
+    answer: "Oscar",
   },
   {
     id: "m300",
     title: "MOVIES $300",
     question:
-      "What awards are necessary to achieve 'EGOT status'?\n\nAll or Nothing",
+      "What awards are necessary to achieve 'EGOT' status?\n\nAll or Nothing",
     answer: "Emmy, Grammy, Oscar, Tony",
   },
   {
@@ -28,19 +28,21 @@ let jeopardyData = [
   {
     id: "m500",
     title: "MOVIES $500",
-    question: "What initial career did Amitabh Bachchan take up in 1969?",
-    answer: "Voice Acting/Narrating",
+    question:
+      "Which actor won consecutive Oscars for Best Actor in 1994 and 1995?\n\nBonus: $100 for each movie they won it for.",
+    answer: "Tom Hanks\n\nPhiladelphia(1994) and Forrest Gump(1995)",
   },
   {
     id: "k100",
     title: "GENERAL KNOWLEDGE $100",
-    question: "What is the largest animal?",
-    answer: "Blue Whale",
+    question:
+      "What is the slowest moving land mammal?\n\nBonus: $100 for the specific species of animal.",
+    answer: "(Three Toed) Sloth",
   },
   {
     id: "k200",
     title: "GENERAL KNOWLEDGE $200",
-    question: "What does 'www' stand for in a url?",
+    question: "What does 'www' stand for in a URL?",
     answer: "World Wide Web",
   },
   {
@@ -60,20 +62,20 @@ let jeopardyData = [
     id: "k500",
     title: "GENERAL KNOWLEDGE $500",
     question:
-      "After Chicago, what is the most populous U.S. city in the Central Time Zone?",
-    answer: "Houston",
+      "After Denver, what is the most populous US city in the Mountain Time Zone?",
+    answer: "Alberquerque, New Mexico",
   },
   {
     id: "g100",
     title: "GEOGRAPHY $100",
-    question: "Which country is home to the Eiffel Tower?",
-    answer: "France",
+    question: "Which country is home to Big Ben?",
+    answer: "United Kingdom",
   },
   {
     id: "g200",
     title: "GEOGRAPHY $200",
-    question: "What is the biggest desert in the world?",
-    answer: "Antarctica",
+    question: "What is the largest dry desert in the world?",
+    answer: "Sahara",
   },
   {
     id: "g300",
@@ -256,3 +258,5 @@ superQuestion.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function () {
   setupJeopardyBoard(null, null);
 });
+
+// sljslfdsksdfksdsfdskfdsjkfjsdksdfkjdskj
