@@ -62,8 +62,8 @@ let jeopardyData = [
     id: "k500",
     title: "GENERAL KNOWLEDGE $500",
     question:
-      "After Denver, what is the most populous US city in the Mountain Time Zone?",
-    answer: "Alberquerque, New Mexico",
+      "After Chicago, what is the most populous US city in the Central Time Zone?",
+    answer: "Houston, Texas",
   },
   {
     id: "g100",
@@ -74,8 +74,8 @@ let jeopardyData = [
   {
     id: "g200",
     title: "GEOGRAPHY $200",
-    question: "What is the largest dry desert in the world?",
-    answer: "Sahara",
+    question: "What is the largest desert in the world?",
+    answer: "Antarctica",
   },
   {
     id: "g300",
@@ -182,6 +182,7 @@ let container1 = document.querySelector(".container");
 let container2 = document.querySelector(".container2");
 let question = document.querySelector("#questionBox");
 let answer = document.querySelector("#answerBox");
+let returnButton = document.querySelector("#returnButton");
 let moneyType = document.querySelector("#moneyType");
 let superQuestion = document.querySelector("#superQuestion");
 
@@ -202,15 +203,17 @@ function jeopardy(item) {
 
   reveal.addEventListener("click", function (e) {
     answer.style.display = "block";
+    returnButton.style.display = "block";
     e.target.remove();
   });
   document.getElementById(item.id).remove();
 }
 
-answer.addEventListener("click", () => {
+returnButton.addEventListener("click", () => {
   container2.style.display = "none";
   container1.style.display = "flex";
   answer.style.display = "none";
+  returnButton.style.display = "none";
 });
 
 function setupJeopardyBoard(supQ, supQ2) {
@@ -258,5 +261,3 @@ superQuestion.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function () {
   setupJeopardyBoard(null, null);
 });
-
-// sljslfdsksdfksdsfdskfdsjkfjsdksdfkjdskj

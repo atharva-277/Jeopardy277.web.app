@@ -38,6 +38,10 @@ b {
   background-color: #68a1a4;
 }
 
+button {
+  cursor: pointer;
+}
+
 .boardPicker {
   background-color: #e9e3cb;
   color: #5a1b00;
@@ -53,10 +57,10 @@ b {
   display: none;
 }
 
-#answerBox {
+#answerBox,
+#returnButton {
   display: none;
   font-size: 35px;
-  cursor: pointer;
   font-family: "Hammersmith One", sans-serif;
 }
 
@@ -78,11 +82,11 @@ button {
   border-color: black;
 }
 
-.answer {
+.answer,
+#returnButton {
   font-family: "Hammersmith One", sans-serif;
   border: 2px solid black;
   box-shadow: 5px 5px gray;
-  cursor: pointer;
 }
 
 #superQuestion {
@@ -104,6 +108,7 @@ button {
 
 .answer:hover,
 .boardPicker:hover,
-.options:hover {
+.options:hover,
+#returnButton:hover {
   opacity: 80%;
 }
